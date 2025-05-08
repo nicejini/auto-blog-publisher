@@ -20,6 +20,9 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: Build scripts
+      run: npm run build:scripts
+      
     - name: Generate and publish posts
       env:
         GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
@@ -27,7 +30,7 @@ jobs:
         GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
         BLOG_API_ENDPOINT: ${{ secrets.BLOG_API_ENDPOINT }}
         BLOG_API_KEY: ${{ secrets.BLOG_API_KEY }}
-      run: npm run generate-posts
+      run: npm run run:posts
       
     - name: Commit changes
       run: |

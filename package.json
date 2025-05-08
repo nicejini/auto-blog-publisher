@@ -7,27 +7,29 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-posts": "ts-node src/scripts/generate-posts.ts"
+    "generate-posts": "ts-node src/scripts/generate-posts.ts",
+    "build:scripts": "tsc src/scripts/generate-posts.ts --outDir dist/scripts --esModuleInterop",
+    "run:posts": "node dist/scripts/generate-posts.js"
   },
   "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "googleapis": "^129.0.0",
     "@google/generative-ai": "^0.1.0",
-    "dotenv": "^16.3.1",
-    "typescript": "^5.0.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
-    "tailwindcss": "^3.3.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^16.3.1",
+    "googleapis": "^129.0.0",
+    "next": "^14.0.0",
+    "postcss": "^8.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.0.0"
   },
   "devDependencies": {
-    "ts-node": "^10.9.0",
-    "@typescript-eslint/parser": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0"
+    "eslint-config-next": "^14.0.0",
+    "ts-node": "^10.9.0"
   }
-} 
+}
